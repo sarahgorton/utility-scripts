@@ -2,7 +2,9 @@
 # coding: utf-8
 
 # # Manage BigQuery Tables
-# * Code to connect with BigQuery and delete, create, and load tables as needed
+
+# #### Purpose
+# Code to connect with BigQuery and delete, create, and load tables as needed
 
 # In[ ]:
 
@@ -11,9 +13,6 @@
 
 # functionality for authenticating using Google Cloud Service Account credentials
 from google.oauth2 import service_account
-
-# authenticate and authorize applications to access Google APIs using Service Account credentials
-from oauth2client.service_account import ServiceAccountCredentials
 
 # allows interaction with bigquery 
 from google.cloud import bigquery
@@ -99,7 +98,7 @@ for table_id in table_ids:
 # In[ ]:
 
 
-# Function delete_table
+# Function: delete_table
 
 def delete_table(_project_dataset_table_ref):
     """
@@ -120,7 +119,7 @@ def delete_table(_project_dataset_table_ref):
 # In[ ]:
 
 
-# # TEST delete_table
+# # TEST: delete_table
 
 # # 1. Determine desired table (assign table_ref with one of the table_ids printed above)
 # table_ref = "xx"
@@ -133,7 +132,7 @@ def delete_table(_project_dataset_table_ref):
 # In[ ]:
 
 
-# Function create_and_load_table
+# Function: create_and_load_table
 
 def create_and_load_table(_project_dataset_table_ref, _df_to_load):
     """
@@ -164,7 +163,7 @@ def create_and_load_table(_project_dataset_table_ref, _df_to_load):
 # In[ ]:
 
 
-# # # TEST create_and_load_table
+# # # TEST: create_and_load_table
 
 # # 1. Determine desired table (assign table_ref with one of the table_ids printed above)
 # table_ref = "xx"
